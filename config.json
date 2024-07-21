@@ -1,0 +1,45 @@
+{
+  "DATA_TRAIN_DIRECTORY": "C:/Users/bhuhp/Supriya/PACGAN_NEW/Training/data/train_final",
+  "LABEL_TRAIN_DIRECTORY": "C:/Users/bhuhp/Supriya/PACGAN_NEW/Training/data/train_labels.csv",
+  "DATA_TEST_DIRECTORY":"C:/Users/bhuhp/Supriya/PACGAN_NEW/Training/data/test_final",
+  "LABEL_TEST_DIRECTORY": "C:/Users/bhuhp/Supriya/PACGAN_NEW/Training/data/test_labels.csv",
+
+  "IMAGE_DIRECTORY": "saved_images/PACGAN",
+  "MODEL_DIRECTORY": "saved_models/PACGAN",
+
+  "IMAGE_CHANNELS": 3,
+
+  "CLASS_SIZE": 2,
+
+  "DEVICE": "'cuda' if torch.cuda.is_available() else 'cpu'",
+
+  "GPUS_N": [0],
+
+  "IN_CHANNELS": 512,
+  "FACTORS": [1, 1, 0.5, 0.25, 0.125, 0.0625],
+
+  "LEARNING_RATE": 0.001,
+  "BATCH_SIZES": [32, 32, 32, 16, 16, 16, 16],
+  "EMBEDDING_DIM": 3,
+  "Z_DIM": 512,
+  "CRITIC_ITERATIONS": [1, 1, 1, 1, 1, 2, 2],
+  "LAMBDA_GP": 10,
+  "LAMBDA_CLS_1": 4,
+  "LAMBDA_CLS_2": 4,
+
+  "PROGRESSIVE_EPOCHS": [0, 0, 0, 0, 8, 1, 30],
+
+  "DISP_EVERY_N_EPOCHS": 50,
+
+  "VALIDATE": true,
+  "START_CHECK_AT": 0.6,
+
+  "TESTING": false,
+  "TEST_USING_BEST_MODEL": true,
+
+  "GENERATE": true,
+  "N_IMAGES_GENERATED": [10],
+
+  "LOAD_MODEL": true,
+  "START_TRAIN_AT_IMG_SIZE": 128
+}
